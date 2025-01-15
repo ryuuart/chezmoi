@@ -40,7 +40,7 @@
     }
   },
   {
-    "context": "Dock || (Editor && VimControl)",
+    "context": "Dock || EmptyPane || (Editor && VimControl)",
     "bindings": {
       // finding files
       "space space": "file_finder::Toggle",
