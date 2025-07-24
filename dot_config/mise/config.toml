@@ -1,0 +1,11 @@
+[tools]
+1password-cli = "latest"
+chezmoi = "latest"
+go = "latest"
+lazygit = "latest"
+node = "latest"
+pnpm = "latest"
+rust = "latest"
+rust-analyzer = "latest"
+uv = "latest"
+zoxide = "latest"
