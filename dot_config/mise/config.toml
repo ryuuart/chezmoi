@@ -1,8 +1,10 @@
 [tools]
 1password-cli = "latest"
 chezmoi = "latest"
+gh = "latest"
 go = "latest"
 lazygit = "latest"
+neovim = "latest"
 node = "latest"
 pnpm = "latest"
 rust = "latest"
