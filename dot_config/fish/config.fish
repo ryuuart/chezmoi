@@ -10,13 +10,16 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 
     # mise - dev environment and tools
-    mise=(which mise) $mise  activate fish | source
+    mise=(which mise) $mise activate fish | source
 
     # zoxide - improved & smarter cd
     zoxide init fish | source
 
     # set default editor to neovim
     set -gx EDITOR nvim
+
+    # add completion scripts
+    gh completion -s fish | source
 
     # macos config
     if test (uname) = Darwin
