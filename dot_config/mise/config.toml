@@ -1,6 +1,7 @@
 [tools]
 1password-cli = "latest"
 chezmoi = "latest"
+cmake = "latest"
 gh = "latest"
 go = "latest"
 lazygit = "latest"
