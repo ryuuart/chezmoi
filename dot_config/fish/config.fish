@@ -21,9 +21,15 @@ if status is-interactive
     # add completion scripts
     gh completion -s fish | source
 
+    # setup go
+    set -x GOPATH "$HOME/go"
+    fish_add_path "$GOPATH/bin"
+
     # macos config
     if test (uname) = Darwin
         # homebrew
-        fish_add_path /opt/homebrew/bin/
+        if not contains /opt/homebrew/bin $PATH
+            fish_add_path /opt/homebrew/bin
+        end
     end
 end
