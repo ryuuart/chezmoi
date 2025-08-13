@@ -25,6 +25,9 @@ if status is-interactive
     set -x GOPATH "$HOME/go"
     fish_add_path "$GOPATH/bin"
 
+    # setup rust
+    source "$HOME/.cargo/env.fish"
+
     # macos config
     if test (uname) = Darwin
         # homebrew
