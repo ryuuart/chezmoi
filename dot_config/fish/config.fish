@@ -6,18 +6,16 @@ set -gx XDG_DATA_DIRS /usr/local/share/:/usr/share/
 set -gx XDG_CONFIG_DIRS /etc/xdg
 set -gx XDG_CACHE_HOME $HOME/.cache
 
+# set locale
+set -gx LANG en_US.UTF-8
+set -gx LC_ALL en_US.UTF-8
+
 # macos config
 if test (uname) = Darwin
-    # set locale
-    set -gx LANG en_US.UTF-8
-    set -gx LC_ALL en_US.UTF-8
-
-    # bit
-    if not string match -q -- /Users/long/bin $PATH
-        set -gx PATH $PATH /Users/long/bin
+    # homebrew
+    if not contains /opt/homebrew/bin $PATH
+        fish_add_path /opt/homebrew/bin
     end
-    # bit end
-
     eval "$(/opt/homebrew/bin/brew shellenv)"
 end
 
@@ -49,9 +47,6 @@ if status is-interactive
 
     # macos config
     if test (uname) = Darwin
-        # homebrew
-        if not contains /opt/homebrew/bin $PATH
-            fish_add_path /opt/homebrew/bin
-        end
+        # macos config goes here
     end
 end
