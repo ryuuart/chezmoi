@@ -17,6 +17,10 @@ if test (uname) = Darwin
         fish_add_path /opt/homebrew/bin
     end
     eval "$(/opt/homebrew/bin/brew shellenv)"
+
+    # vcpkg
+    set -gx VCPKG_ROOT $XDG_DATA_HOME/vcpkg
+    fish_add_path $VCPKG_ROOT
 end
 
 # Configure interactive shell settings
