@@ -21,6 +21,9 @@ if test (uname) = Darwin
     # vcpkg
     set -gx VCPKG_ROOT $XDG_DATA_HOME/vcpkg
     fish_add_path $VCPKG_ROOT
+
+    # setup rust
+    source "$HOME/.cargo/env.fish"
 end
 
 # Configure interactive shell settings
@@ -45,9 +48,6 @@ if status is-interactive
     # setup go
     set -x GOPATH "$HOME/go"
     fish_add_path "$GOPATH/bin"
-
-    # setup rust
-    source "$HOME/.cargo/env.fish"
 
     # macos config
     if test (uname) = Darwin
